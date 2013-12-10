@@ -18,4 +18,6 @@ my_oauth <- OAuthFactory$new(consumerKey=consumerKey,
                              consumerSecret=consumerSecret, requestURL=requestURL,
                              accessURL=accessURL, authURL=authURL)
 
+remove(accessURL, authURL, requestURL)
+
 message("go to the link to complete ROAuth")

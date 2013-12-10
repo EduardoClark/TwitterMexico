@@ -6,8 +6,12 @@
 ###############################
 
 #Extract Tweets with Streaming API
+message("Extracting tweets, this will take a while")
+T <- Sys.time() + 57600
+message(paste("This should finish at ", T, sep=""))
+remove(T)
 filterStream( file="data-out/tweetsMexico.json",
-             locations=c(-117.642,13.881 ,-86.616, 32.584), timeout=691200, oauth=my_oauth )
+             locations=c(-117.642,13.881 ,-86.616, 32.584), timeout=57600, oauth=my_oauth )
 
 
 ##Parse JSON to RDF
