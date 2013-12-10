@@ -1,0 +1,16 @@
+{
+    "contents" : "###############################\n## Author: Eduardo Clark\n## Project: Tweets by mexican municipality\n## Date: December 2013\n## Notes: for Alejandra Ibarra \n###############################\n\n#Extract Tweets with Streaming API\nfilterStream( file=\"data-out/tweetsMexico.json\",\n             locations=c(-117.642,13.881 ,-86.616, 32.584), timeout=691200, oauth=my_oauth )\n\n\n##Parse JSON to RDF\ntweets <- parseTweets(\"data-out/tweetsMexico.json\")\ntweets <- subset(tweets, tweets$country_code==\"MX\")\ntweets$lon <- as.numeric(tweets$lon) #coordinates are extracted as numeric\ntweets$lat <- as.numeric(tweets$lat)\nwrite.csv(tweets,\"data-out/tweetsMexico.csv\", row.names=FALSE)\n\n\n\n\n\n\n\n\n\n\n",
+    "created" : 1386717175726.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2298991396",
+    "id" : "7E5E8E16",
+    "lastKnownWriteTime" : 1386717207,
+    "path" : "~/R/TwitterMexico/src/ExtractAndParse.R",
+    "properties" : {
+        "tempName" : "Untitled2"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
