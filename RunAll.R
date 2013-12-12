@@ -14,7 +14,7 @@ source("src/TwitterCredentials.R") #requires user input to complete
 
 #Extract and Parse tweets
 source("src/ExtractAndParse.R")
-soruce("src/MongoParse.R")
+source("src/MongoParse.R")
 
 #Get tweets by location
 source("src/TweetsByPlace.R")
