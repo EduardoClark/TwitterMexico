@@ -12,7 +12,8 @@ G <- ggmap(M)
 
 # Point Map
 G1 <- G + geom_point(data=Tweets, aes(lon,lat))
-Cairo(width=9.6, height=13.5, file="plots/Map1.pdf", type="pdf",units="in")
+#Cairo(width=9.6, height=13.5, file="plots/Map1.pdf", type="pdf",units="in")
+png(filename="plots/Map1.png", width=708, height=870, units="px")
 plot(G1)
 dev.off()
 #2D density map
